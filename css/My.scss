@@ -7,6 +7,11 @@ $baseFontSize: 24px;
 $rootPath: "http://localhost:8005/";
 $baseClassName: "col";
 
+$app-size: 1024px;
+@function center-width($gutter) {
+	@return $app-size - ($gutter * 2);
+}
+
 .#{$baseClassName}1 {
 	font-size: $baseFontSize;
 }
@@ -42,7 +47,7 @@ h3 {
 /* Layout */
 #container {
 	margin-top: 5px;
-	width: 800px;
+	width: center-width(100px);
 	margin-left: auto;
 	margin-right: auto;
 	background: #FFF;
